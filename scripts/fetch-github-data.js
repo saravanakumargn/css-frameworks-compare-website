@@ -252,9 +252,10 @@ const createRepoDataWithResponse = (json, monorepo) => {
       }
     }
 
-    if (packageJson.types || packageJson.typings) {
-      json.types = true;
-    }
+    // TODO: Enable typescript feature later
+    // if (packageJson.types || packageJson.typings) {
+    //   json.types = true;
+    // }
   }
 
   if (!monorepo) {
