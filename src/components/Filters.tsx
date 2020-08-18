@@ -22,28 +22,24 @@ type FilterButtonProps = {
 
 const platforms = [
   {
-    param: 'android',
-    title: 'Android',
+    param: 'uiComponents',
+    title: 'UI Components',
   },
   {
-    param: 'expo',
-    title: 'Expo Client',
+    param: 'templates',
+    title: 'Templates',
   },
   {
-    param: 'ios',
-    title: 'iOS',
+    param: 'scss',
+    title: 'scss/sass',
   },
   {
-    param: 'macos',
-    title: 'macOS',
+    param: 'less',
+    title: 'less',
   },
   {
-    param: 'web',
-    title: 'Web',
-  },
-  {
-    param: 'windows',
-    title: 'Windows',
+    param: 'vanilacss',
+    title: 'Vanila CSS',
   },
 ];
 
@@ -123,7 +119,7 @@ export const Filters = (props: FiltersProps) => {
             },
           ]}>
           <View style={styles.container}>
-            <Headline style={styles.title}>Platform</Headline>
+            <Headline style={styles.title}>Supports</Headline>
             <View style={styles.optionsContainer}>
               {platforms.map(platform => (
                 <ToggleLink
