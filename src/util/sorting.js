@@ -8,13 +8,13 @@ export const recommended = libraries => {
 
 export const compatibility = libraries => {
   libraries.sort((a, b) => {
-    const aCompat = [1, a.expo && typeof a.expo !== 'string', a.ios, a.android, a.web].reduce(
+    const aCompat = [1, a.templates, a.ios, a.uiComponents, a.scss].reduce(
       (total, val) => {
         return val ? total + val : total;
       }
     );
 
-    const bCompat = [1, b.expo && typeof b.expo !== 'string', b.ios, b.android, b.web].reduce(
+    const bCompat = [1, b.templates, b.ios, b.uiComponents, b.scss].reduce(
       (total, val) => {
         return val ? total + val : total;
       }

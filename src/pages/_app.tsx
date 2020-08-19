@@ -15,7 +15,7 @@ import '../styles/styles.css';
 import PreviewStyles from '../styles/PreviewStyles';
 
 Sentry.init({
-  dsn: 'https://b084338633454a63a82c787541b96d8f@sentry.io/2503319',
+  dsn: 'https://5b1385a5a9844d4d801a166909947918@o435830.ingest.sentry.io/5395837',
   enabled: process.env.NODE_ENV === 'production',
 });
 
@@ -31,7 +31,7 @@ const App = ({ pageProps, Component }) => {
                 backgroundColor: context.isDark ? darkColors.background : colors.white,
               }}>
               <Head>
-                <title>React Native Directory</title>
+                <title>Web Style Directory</title>
               </Head>
               <Header />
               <Component {...pageProps} />

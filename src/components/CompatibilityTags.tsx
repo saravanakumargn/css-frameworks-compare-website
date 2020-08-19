@@ -40,12 +40,11 @@ const Tag = ({ platform, tagStyle, showCheck = true }: TagProps) => (
 export function CompatibilityTags(props: Props) {
   const { library } = props;
   const platforms = [
-    library.android ? 'Android' : null,
-    library.expo && typeof library.expo !== 'string' ? 'Expo client' : null,
-    library.ios ? 'iOS' : null,
-    library.macos ? 'macOS' : null,
-    library.web ? 'Web' : null,
-    library.windows ? 'Windows' : null,
+    library.uiComponents ? 'UI Components' : null,
+    library.templates ? 'Templates' : null,
+    library.vanilacss ? 'vanilacss' : null,
+    library.scss ? 'scss/sass' : null,
+    library.less ? 'less' : null,
   ]
     .map(platform => platform)
     .filter(Boolean);
@@ -66,6 +65,7 @@ export function CompatibilityTags(props: Props) {
           ) : null}
           {platforms.map(platform => (
             <Tag
+              key={platform}
               platform={platform}
               tagStyle={{
                 backgroundColor: context.isDark ? darkColors.dark : colors.gray1,

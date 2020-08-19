@@ -15,10 +15,11 @@ export const INITIAL_STATE = {
   rangeStart: 0,
   rangeEnd: PAGINATION_BREAKPOINT,
   support: {
-    ios: false,
+    vanilacss: false,
     expo: false,
-    android: false,
+    templates: false,
     web: false,
+    less: false,
   },
 };
 

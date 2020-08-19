@@ -20,7 +20,7 @@ type FilterButtonProps = {
   isFilterVisible: boolean;
 };
 
-const platforms = [
+const supports = [
   {
     param: 'uiComponents',
     title: 'UI Components',
@@ -31,11 +31,11 @@ const platforms = [
   },
   {
     param: 'scss',
-    title: 'scss/sass',
+    title: 'SCSS',
   },
   {
     param: 'less',
-    title: 'less',
+    title: 'LESS',
   },
   {
     param: 'vanilacss',
@@ -64,7 +64,7 @@ function ToggleLink({ query, paramName, title }) {
 export const FilterButton = (props: FilterButtonProps) => {
   const { isFilterVisible, query, onPress } = props;
   const params = [
-    ...platforms.map(platform => platform.param),
+    ...supports.map(platform => platform.param),
     'hasExample',
     'hasImage',
     'hasTypes',
@@ -121,7 +121,7 @@ export const Filters = (props: FiltersProps) => {
           <View style={styles.container}>
             <Headline style={styles.title}>Supports</Headline>
             <View style={styles.optionsContainer}>
-              {platforms.map(platform => (
+              {supports.map(platform => (
                 <ToggleLink
                   key={platform.param}
                   query={query}

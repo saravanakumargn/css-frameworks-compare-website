@@ -20,23 +20,23 @@ export const handleFilterLibraries = ({
     let isTopicMatch = false;
     let isSearchMatch = false;
 
-    if (support.ios && !library.ios) {
+    if (support.uiComponents && !library.uiComponents) {
       return false;
     }
 
-    if (support.android && !library.android) {
+    if (support.templates && !library.templates) {
       return false;
     }
 
-    if (support.web && !library.web) {
+    if (support.scss && !library.scss) {
       return false;
     }
 
-    if (support.windows && !library.windows) {
+    if (support.less && !library.less) {
       return false;
     }
 
-    if (support.macos && !library.macos) {
+    if (support.vanilacss && !library.vanilacss) {
       return false;
     }
 

@@ -1,10 +1,9 @@
 export type Query = {
-  android?: string;
-  expo?: string;
-  ios?: string;
-  macos?: string;
-  web?: string;
-  windows?: string;
+  uiComponents?: string;
+  templates?: string;
+  vanilacss?: string;
+  scss?: string;
+  less?: string;
   order?: 'quality' | 'recommended' | 'issues' | 'downloads' | 'stars';
   search?: string;
   offset?: string;
@@ -20,12 +19,11 @@ export type Query = {
 export type Library = {
   goldstar: boolean;
   githubUrl: string;
-  ios: boolean;
-  android: boolean;
-  web: boolean;
-  expo: boolean;
-  windows: boolean;
-  macos: boolean;
+  uiComponents: boolean;
+  scss: boolean;
+  templates: boolean;
+  less: boolean;
+  vanilacss: boolean;
   unmaintained: boolean;
   dev: boolean;
   github: {
