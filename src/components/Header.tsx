@@ -14,18 +14,6 @@ export default function Header() {
     <CustomAppearanceContext.Consumer>
       {context => (
         <HtmlHeader>
-          <View style={styles.bannerContainer}>
-            <P style={styles.bannerText}>
-              Black Lives Matter.{' '}
-              <A
-                target="_blank"
-                href="https://support.eji.org/give/153413/#!/donation/checkout"
-                style={styles.bannerLink}>
-                Support the Equal Justice Initiative
-              </A>
-              .
-            </P>
-          </View>
           <View
             style={[
               styles.header,
@@ -38,7 +26,7 @@ export default function Header() {
                 <Logo fill={colors.primary} width={29} height={26} />
                 <H5 style={isSmallScreen && styles.smallTitle}>
                   <A href="/" style={styles.headerContentsTitle}>
-                    React Native Directory
+                    Web Style Directory
                   </A>
                 </H5>
               </View>

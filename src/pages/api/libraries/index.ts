@@ -58,6 +58,12 @@ function handler(req: NextApiRequest, res: NextApiResponse) {
       vanilacss: req.query.vanilacss,
       templates: req.query.templates,
     },
+    uiFrameworks: {
+      angular: req.query.angular,
+      reactnative: req.query.reactnative,
+      react: req.query.react,
+      vue: req.query.vue
+    },
     hasExample: req.query.hasExample,
     hasImage: req.query.hasImage,
     hasTypes: req.query.hasTypes,

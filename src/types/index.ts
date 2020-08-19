@@ -4,6 +4,10 @@ export type Query = {
   vanilacss?: string;
   scss?: string;
   less?: string;
+  angular?: string;
+  reactnative?: string;
+  react?: string;
+  vue?: string;
   order?: 'quality' | 'recommended' | 'issues' | 'downloads' | 'stars';
   search?: string;
   offset?: string;
@@ -24,6 +28,10 @@ export type Library = {
   templates: boolean;
   less: boolean;
   vanilacss: boolean;
+  angular?: boolean;
+  reactnative?: boolean;
+  react?: boolean;
+  vue?: boolean;
   unmaintained: boolean;
   dev: boolean;
   github: {

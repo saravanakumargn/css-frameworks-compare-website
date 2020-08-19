@@ -16,14 +16,21 @@ export const INITIAL_STATE = {
   rangeEnd: PAGINATION_BREAKPOINT,
   support: {
     vanilacss: false,
-    expo: false,
     templates: false,
     web: false,
     less: false,
   },
+  uiFrameworks: {
+    angular: false,
+    reactnative: false,
+    react: false,
+    vue: false,
+  },
 };
 
 export const reducer = (state = INITIAL_STATE, action) => {
+  console.log(state)
+  console.log(action)
   switch (action.type) {
     case 'UPDATE_SUPPORT_FILTER':
       return { ...state, support: { ...state.support, ...action.support } };

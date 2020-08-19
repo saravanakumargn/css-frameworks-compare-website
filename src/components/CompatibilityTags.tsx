@@ -42,9 +42,9 @@ export function CompatibilityTags(props: Props) {
   const platforms = [
     library.uiComponents ? 'UI Components' : null,
     library.templates ? 'Templates' : null,
-    library.vanilacss ? 'vanilacss' : null,
-    library.scss ? 'scss/sass' : null,
-    library.less ? 'less' : null,
+    library.vanilacss ? 'Vanila CSS' : null,
+    library.scss ? 'SCSS' : null,
+    library.less ? 'LESS' : null,
   ]
     .map(platform => platform)
     .filter(Boolean);

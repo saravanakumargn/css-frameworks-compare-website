@@ -5,6 +5,7 @@ export const handleFilterLibraries = ({
   queryTopic,
   querySearch,
   support,
+  uiFrameworks,
   hasExample,
   hasImage,
   hasTypes,
@@ -19,6 +20,22 @@ export const handleFilterLibraries = ({
   return libraries.filter(library => {
     let isTopicMatch = false;
     let isSearchMatch = false;
+
+    if (uiFrameworks.angular && !library.angular) {
+      return false;
+    }
+
+    if (uiFrameworks.reactnative && !library.reactnative) {
+      return false;
+    }
+
+    if (uiFrameworks.react && !library.react) {
+      return false;
+    }
+
+    if (uiFrameworks.vue && !library.vue) {
+      return false;
+    }
 
     if (support.uiComponents && !library.uiComponents) {
       return false;
@@ -37,14 +54,6 @@ export const handleFilterLibraries = ({
     }
 
     if (support.vanilacss && !library.vanilacss) {
-      return false;
-    }
-
-    if (support.expo && !library.expo) {
-      return false;
-    }
-
-    if (support.expo && typeof library.expo === 'string') {
       return false;
     }
 

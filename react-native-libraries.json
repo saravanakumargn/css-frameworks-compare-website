@@ -22,7 +22,7 @@
     "scss": false,
     "less": false,
     "vanilacss": true,
-    "JSLibrarySupport": [ "Angular" ]
+    "angular": true
   },
   {
     "githubUrl": "https://github.com/mui-org/material-ui",
@@ -31,7 +31,7 @@
     "scss": false,
     "less": false,
     "vanilacss": false,
-    "JSLibrarySupport": [ "React" ]
+    "react": true
   },
   {
     "githubUrl": "https://github.com/vmware/clarity",
@@ -41,7 +41,7 @@
     "scss": false,
     "less": false,
     "vanilacss": true,
-    "JSLibrarySupport": [ "Angular" ]
+    "angular": true
   },
   {
     "githubUrl": "https://github.com/uber/baseweb",
@@ -50,6 +50,6 @@
     "scss": false,
     "less": false,
     "vanilacss": false,
-    "JSLibrarySupport": [ "React" ]
+    "react": true
   }
 ]

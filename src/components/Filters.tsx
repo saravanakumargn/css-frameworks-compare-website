@@ -20,6 +20,24 @@ type FilterButtonProps = {
   isFilterVisible: boolean;
 };
 
+const uiFrameworks = [
+  {
+    param: 'angular',
+    title: 'Angular',
+  },
+  {
+    param: 'reactnative',
+    title: 'React Native',
+  },
+  {
+    param: 'react',
+    title: 'React',
+  },
+  {
+    param: 'vue',
+    title: 'Vue',
+  },
+];
 const supports = [
   {
     param: 'uiComponents',
@@ -65,6 +83,7 @@ export const FilterButton = (props: FilterButtonProps) => {
   const { isFilterVisible, query, onPress } = props;
   const params = [
     ...supports.map(platform => platform.param),
+    ...uiFrameworks.map(platform => platform.param),
     'hasExample',
     'hasImage',
     'hasTypes',
@@ -118,6 +137,19 @@ export const Filters = (props: FiltersProps) => {
               backgroundColor: context.isDark ? darkColors.veryDark : colors.gray1,
             },
           ]}>
+          <View style={styles.container}>
+            <Headline style={styles.title}>UI Frameworks</Headline>
+            <View style={styles.optionsContainer}>
+              {uiFrameworks.map(platform => (
+                <ToggleLink
+                  key={platform.param}
+                  query={query}
+                  paramName={platform.param}
+                  title={platform.title}
+                />
+              ))}
+            </View>
+          </View>
           <View style={styles.container}>
             <Headline style={styles.title}>Supports</Headline>
             <View style={styles.optionsContainer}>

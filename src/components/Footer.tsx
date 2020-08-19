@@ -21,12 +21,7 @@ export default function Footer() {
               Missing a library?{' '}
               <A href="https://github.com/react-native-community/react-native-directory#how-do-i-add-a-library">
                 Add it to the directory
-              </A>
-              . Want to learn more about React Native? Check out the{' '}
-              <A href="https://facebook.github.io/react-native/docs/getting-started.html">
-                official React Native docs
-              </A>
-              , and <A href="https://expo.io">Expo</A>.
+              </A>.
             </P>
           </ContentContainer>
         </View>
